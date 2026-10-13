@@ -1,0 +1,17 @@
+<article class="stat-card">
+  <p class="stat-label">{{ kpi().label }}</p>
+  <p class="stat-value">
+    @switch (kpi().format) {
+      @case ('currency') {
+        {{ kpi().value | currency: 'USD' : 'symbol' : '1.0-0' }}
+      }
+      @default {
+        {{ kpi().value | number }}
+      }
+    }
+  </p>
+  <p class="stat-delta" [class.is-down]="kpi().delta < 0">
+    <span>{{ signedDelta() }}</span>
+    <span>{{ kpi().hint }}</span>
+  </p>
+</article>

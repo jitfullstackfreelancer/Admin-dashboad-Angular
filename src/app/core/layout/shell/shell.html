@@ -1,0 +1,70 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<mat-sidenav-container class="shell-container">
+  <mat-sidenav
+    id="app-sidebar"
+    class="shell-sidenav"
+    [mode]="isHandset() ? 'over' : 'side'"
+    [opened]="sidenavOpened()"
+    (closedStart)="closeMenu()"
+  >
+    <a class="brand" routerLink="/" (click)="closeMenu()">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span class="brand-copy">
+        <strong>Harbor</strong>
+        <small>Analytics</small>
+      </span>
+    </a>
+    <nav class="side-nav" aria-label="Primary">
+      @for (item of nav; track item.path) {
+        <a
+          class="nav-link"
+          [routerLink]="item.path"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: item.exact }"
+          (click)="closeMenu()"
+        >
+          <app-icon [name]="item.icon" />
+          <span>{{ item.label }}</span>
+        </a>
+      }
+    </nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="shell-content">
+    <header class="shell-header">
+      @if (isHandset()) {
+        <button
+          type="button"
+          class="icon-button"
+          (click)="toggleMenu()"
+          [attr.aria-expanded]="menuOpen()"
+          aria-controls="app-sidebar"
+          [attr.aria-label]="menuOpen() ? 'Close navigation' : 'Open navigation'"
+        >
+          <app-icon name="menu" />
+        </button>
+        <a class="brand brand-compact" routerLink="/">
+          <span class="brand-mark" aria-hidden="true">H</span>
+          <strong>Harbor</strong>
+        </a>
+      }
+      <form class="global-search" role="search" (submit)="onSearch($event)">
+        <label class="sr-only" for="global-search">Search orders</label>
+        <input
+          id="global-search"
+          #globalSearch
+          type="search"
+          name="q"
+          placeholder="Search orders"
+          (input)="onDraft($event)"
+        />
+        <button type="submit" aria-label="Submit search">
+          <app-icon name="search" />
+        </button>
+      </form>
+    </header>
+    <main id="main" class="shell-main">
+      <router-outlet />
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,11 @@
+<article class="panel chart-card">
+  <header class="panel-heading">
+    <h2>{{ title() }}</h2>
+    @if (subtitle()) {
+      <p>{{ subtitle() }}</p>
+    }
+  </header>
+  <div class="chart-canvas">
+    <canvas #canvas role="img" [attr.aria-label]="title()"></canvas>
+  </div>
+</article>

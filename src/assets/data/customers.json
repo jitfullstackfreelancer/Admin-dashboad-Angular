@@ -1,0 +1,242 @@
+[
+  {
+    "id": "CUS-1001",
+    "name": "Priya Shah",
+    "email": "priya.shah@example.com",
+    "region": "Asia Pacific",
+    "segment": "vip",
+    "orders": 28,
+    "spend": 18420,
+    "joined": "2024-03-12T00:00:00"
+  },
+  {
+    "id": "CUS-1002",
+    "name": "Jonas Keller",
+    "email": "jonas.keller@example.com",
+    "region": "Europe",
+    "segment": "returning",
+    "orders": 14,
+    "spend": 6320,
+    "joined": "2024-11-02T00:00:00"
+  },
+  {
+    "id": "CUS-1003",
+    "name": "Nora Blake",
+    "email": "nora.blake@example.com",
+    "region": "North America",
+    "segment": "vip",
+    "orders": 31,
+    "spend": 22140,
+    "joined": "2023-08-19T00:00:00"
+  },
+  {
+    "id": "CUS-1004",
+    "name": "Mateo Alvarez",
+    "email": "mateo.alvarez@example.com",
+    "region": "Latin America",
+    "segment": "new",
+    "orders": 2,
+    "spend": 480,
+    "joined": "2026-09-18T00:00:00"
+  },
+  {
+    "id": "CUS-1005",
+    "name": "Amira Hassan",
+    "email": "amira.hassan@example.com",
+    "region": "Europe",
+    "segment": "returning",
+    "orders": 11,
+    "spend": 4980,
+    "joined": "2025-01-27T00:00:00"
+  },
+  {
+    "id": "CUS-1006",
+    "name": "Liam O'Connor",
+    "email": "liam.oconnor@example.com",
+    "region": "Europe",
+    "segment": "returning",
+    "orders": 9,
+    "spend": 3760,
+    "joined": "2025-04-09T00:00:00"
+  },
+  {
+    "id": "CUS-1007",
+    "name": "Sofia Rossi",
+    "email": "sofia.rossi@example.com",
+    "region": "Europe",
+    "segment": "vip",
+    "orders": 22,
+    "spend": 15780,
+    "joined": "2024-06-14T00:00:00"
+  },
+  {
+    "id": "CUS-1008",
+    "name": "Ethan Brooks",
+    "email": "ethan.brooks@example.com",
+    "region": "North America",
+    "segment": "new",
+    "orders": 1,
+    "spend": 126,
+    "joined": "2026-10-03T00:00:00"
+  },
+  {
+    "id": "CUS-1009",
+    "name": "Hana Suzuki",
+    "email": "hana.suzuki@example.com",
+    "region": "Asia Pacific",
+    "segment": "returning",
+    "orders": 16,
+    "spend": 8440,
+    "joined": "2024-09-30T00:00:00"
+  },
+  {
+    "id": "CUS-1010",
+    "name": "Chloe Martin",
+    "email": "chloe.martin@example.com",
+    "region": "Europe",
+    "segment": "new",
+    "orders": 3,
+    "spend": 910,
+    "joined": "2026-08-22T00:00:00"
+  },
+  {
+    "id": "CUS-1011",
+    "name": "Noah Williams",
+    "email": "noah.williams@example.com",
+    "region": "North America",
+    "segment": "returning",
+    "orders": 12,
+    "spend": 5670,
+    "joined": "2025-02-11T00:00:00"
+  },
+  {
+    "id": "CUS-1012",
+    "name": "Aisha Rahman",
+    "email": "aisha.rahman@example.com",
+    "region": "Asia Pacific",
+    "segment": "vip",
+    "orders": 26,
+    "spend": 19850,
+    "joined": "2023-12-05T00:00:00"
+  },
+  {
+    "id": "CUS-1013",
+    "name": "Lucas Meyer",
+    "email": "lucas.meyer@example.com",
+    "region": "Europe",
+    "segment": "returning",
+    "orders": 8,
+    "spend": 2890,
+    "joined": "2025-06-17T00:00:00"
+  },
+  {
+    "id": "CUS-1014",
+    "name": "Emma Chen",
+    "email": "emma.chen@example.com",
+    "region": "Asia Pacific",
+    "segment": "new",
+    "orders": 2,
+    "spend": 640,
+    "joined": "2026-09-01T00:00:00"
+  },
+  {
+    "id": "CUS-1015",
+    "name": "Oliver Grant",
+    "email": "oliver.grant@example.com",
+    "region": "North America",
+    "segment": "returning",
+    "orders": 15,
+    "spend": 7320,
+    "joined": "2024-10-28T00:00:00"
+  },
+  {
+    "id": "CUS-1016",
+    "name": "Isabella Costa",
+    "email": "isabella.costa@example.com",
+    "region": "Latin America",
+    "segment": "vip",
+    "orders": 19,
+    "spend": 12110,
+    "joined": "2024-01-16T00:00:00"
+  },
+  {
+    "id": "CUS-1017",
+    "name": "Hugo Bernard",
+    "email": "hugo.bernard@example.com",
+    "region": "Europe",
+    "segment": "new",
+    "orders": 1,
+    "spend": 210,
+    "joined": "2026-09-29T00:00:00"
+  },
+  {
+    "id": "CUS-1018",
+    "name": "Mia Thompson",
+    "email": "mia.thompson@example.com",
+    "region": "North America",
+    "segment": "returning",
+    "orders": 10,
+    "spend": 4540,
+    "joined": "2025-03-08T00:00:00"
+  },
+  {
+    "id": "CUS-1019",
+    "name": "Kenji Sato",
+    "email": "kenji.sato@example.com",
+    "region": "Asia Pacific",
+    "segment": "returning",
+    "orders": 13,
+    "spend": 6890,
+    "joined": "2024-12-21T00:00:00"
+  },
+  {
+    "id": "CUS-1020",
+    "name": "Freya Nielsen",
+    "email": "freya.nielsen@example.com",
+    "region": "Europe",
+    "segment": "new",
+    "orders": 4,
+    "spend": 1320,
+    "joined": "2026-07-15T00:00:00"
+  },
+  {
+    "id": "CUS-1021",
+    "name": "Daniel Okonkwo",
+    "email": "daniel.okonkwo@example.com",
+    "region": "North America",
+    "segment": "vip",
+    "orders": 24,
+    "spend": 17340,
+    "joined": "2023-05-03T00:00:00"
+  },
+  {
+    "id": "CUS-1022",
+    "name": "Sara Lindgren",
+    "email": "sara.lindgren@example.com",
+    "region": "Europe",
+    "segment": "returning",
+    "orders": 7,
+    "spend": 2410,
+    "joined": "2025-08-26T00:00:00"
+  },
+  {
+    "id": "CUS-1023",
+    "name": "Omar Farouk",
+    "email": "omar.farouk@example.com",
+    "region": "Asia Pacific",
+    "segment": "new",
+    "orders": 2,
+    "spend": 560,
+    "joined": "2026-09-11T00:00:00"
+  },
+  {
+    "id": "CUS-1024",
+    "name": "Grace Adeyemi",
+    "email": "grace.adeyemi@example.com",
+    "region": "North America",
+    "segment": "returning",
+    "orders": 11,
+    "spend": 5180,
+    "joined": "2025-05-19T00:00:00"
+  }
+]

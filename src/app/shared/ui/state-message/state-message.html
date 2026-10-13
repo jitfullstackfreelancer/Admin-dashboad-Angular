@@ -1,0 +1,6 @@
+<div class="state-panel" [attr.role]="tone() === 'error' ? 'alert' : 'status'">
+  @if (tone() === 'loading') {
+    <mat-progress-spinner mode="indeterminate" diameter="36" />
+  }
+  <p>{{ message() }}</p>
+</div>

@@ -1,0 +1,40 @@
+<app-page-header
+  title="Customers"
+  subtitle="Filter by segment and review region, orders, and lifetime spend."
+/>
+
+@if (customers()) {
+  <section class="panel">
+    <app-data-table
+      [rows]="filtered()"
+      [columns]="columns"
+      [query]="query()"
+      [searchKeys]="searchKeys"
+      caption="Customers"
+      searchPlaceholder="Search by name, email, or region"
+      emptyMessage="No customers match your search or segment filter."
+      (queryChange)="onQueryChange($event)"
+    >
+      <mat-form-field
+        tableFilters
+        appearance="outline"
+        subscriptSizing="dynamic"
+        class="filter-field"
+      >
+        <mat-label>Segment</mat-label>
+        <mat-select [value]="segment()" (selectionChange)="onSegmentChange($event.value)">
+          @for (option of segmentOptions; track option.value) {
+            <mat-option [value]="option.value">{{ option.label }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </app-data-table>
+  </section>
+} @else if (loadError()) {
+  <app-state-message
+    tone="error"
+    message="Customers could not be loaded. Refresh the page to try again."
+  />
+} @else {
+  <app-state-message message="Loading customers" />
+}

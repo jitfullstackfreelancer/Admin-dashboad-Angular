@@ -1,0 +1,193 @@
+{
+  "kpis": [
+    {
+      "id": "revenue",
+      "label": "Revenue",
+      "value": 248496,
+      "format": "currency",
+      "delta": 8,
+      "hint": "vs August"
+    },
+    {
+      "id": "orders",
+      "label": "Orders",
+      "value": 1336,
+      "format": "number",
+      "delta": 13.2,
+      "hint": "vs August"
+    },
+    {
+      "id": "customers",
+      "label": "Customers",
+      "value": 918,
+      "format": "number",
+      "delta": 5.6,
+      "hint": "vs August"
+    },
+    {
+      "id": "aov",
+      "label": "Average order",
+      "value": 186,
+      "format": "currency",
+      "delta": -4.6,
+      "hint": "vs August"
+    }
+  ],
+  "revenueTrend": [
+    {
+      "month": "Oct 25",
+      "revenue": 186400
+    },
+    {
+      "month": "Nov 25",
+      "revenue": 192800
+    },
+    {
+      "month": "Dec 25",
+      "revenue": 228600
+    },
+    {
+      "month": "Jan 26",
+      "revenue": 201200
+    },
+    {
+      "month": "Feb 26",
+      "revenue": 194500
+    },
+    {
+      "month": "Mar 26",
+      "revenue": 208900
+    },
+    {
+      "month": "Apr 26",
+      "revenue": 214300
+    },
+    {
+      "month": "May 26",
+      "revenue": 221800
+    },
+    {
+      "month": "Jun 26",
+      "revenue": 236400
+    },
+    {
+      "month": "Jul 26",
+      "revenue": 229100
+    },
+    {
+      "month": "Aug 26",
+      "revenue": 230000
+    },
+    {
+      "month": "Sep 26",
+      "revenue": 248496
+    }
+  ],
+  "salesByCategory": [
+    {
+      "category": "Electronics",
+      "amount": 72400
+    },
+    {
+      "category": "Apparel",
+      "amount": 61300
+    },
+    {
+      "category": "Home",
+      "amount": 48200
+    },
+    {
+      "category": "Beauty",
+      "amount": 38600
+    },
+    {
+      "category": "Grocery",
+      "amount": 27996
+    }
+  ],
+  "recentOrders": [
+    {
+      "id": "ORD-2400",
+      "customer": "Isabella Costa",
+      "email": "isabella.costa@example.com",
+      "date": "2026-10-11T00:00:00",
+      "status": "paid",
+      "amount": 248,
+      "channel": "Online"
+    },
+    {
+      "id": "ORD-2399",
+      "customer": "Oliver Grant",
+      "email": "oliver.grant@example.com",
+      "date": "2026-10-10T00:00:00",
+      "status": "shipped",
+      "amount": 430,
+      "channel": "Partner"
+    },
+    {
+      "id": "ORD-2398",
+      "customer": "Emma Chen",
+      "email": "emma.chen@example.com",
+      "date": "2026-10-09T00:00:00",
+      "status": "refunded",
+      "amount": 190,
+      "channel": "Retail"
+    },
+    {
+      "id": "ORD-2397",
+      "customer": "Lucas Meyer",
+      "email": "lucas.meyer@example.com",
+      "date": "2026-10-08T00:00:00",
+      "status": "paid",
+      "amount": 670,
+      "channel": "Online"
+    },
+    {
+      "id": "ORD-2396",
+      "customer": "Aisha Rahman",
+      "email": "aisha.rahman@example.com",
+      "date": "2026-10-07T00:00:00",
+      "status": "paid",
+      "amount": 124,
+      "channel": "Retail"
+    }
+  ],
+  "activity": [
+    {
+      "id": "act-1",
+      "title": "Order ORD-2400 paid",
+      "detail": "Isabella Costa completed an online checkout.",
+      "time": "2026-10-11T16:40:00"
+    },
+    {
+      "id": "act-2",
+      "title": "Nora Blake reached a new spend high",
+      "detail": "Lifetime spend moved past $22,000.",
+      "time": "2026-10-11T11:15:00"
+    },
+    {
+      "id": "act-3",
+      "title": "Refund issued for ORD-2398",
+      "detail": "Retail return processed for Emma Chen.",
+      "time": "2026-10-10T15:05:00"
+    },
+    {
+      "id": "act-4",
+      "title": "Order ORD-2399 shipped",
+      "detail": "Partner shipment left the regional warehouse.",
+      "time": "2026-10-08T09:20:00"
+    },
+    {
+      "id": "act-5",
+      "title": "Ethan Brooks joined",
+      "detail": "New customer from the autumn campaign.",
+      "time": "2026-10-03T13:45:00"
+    },
+    {
+      "id": "act-6",
+      "title": "September close completed",
+      "detail": "Revenue finished at $248,496 across 1,336 orders.",
+      "time": "2026-10-01T08:00:00"
+    }
+  ]
+}

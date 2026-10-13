@@ -1,0 +1,37 @@
+<app-page-header title="Orders" subtitle="Search, filter, and sort a recent sample of 40 orders." />
+
+@if (orders()) {
+  <section class="panel">
+    <app-data-table
+      [rows]="filtered()"
+      [columns]="columns"
+      [query]="query()"
+      [searchKeys]="searchKeys"
+      caption="Orders"
+      searchPlaceholder="Search by order, customer, or channel"
+      emptyMessage="No orders match your search or status filter."
+      (queryChange)="onQueryChange($event)"
+    >
+      <mat-form-field
+        tableFilters
+        appearance="outline"
+        subscriptSizing="dynamic"
+        class="filter-field"
+      >
+        <mat-label>Status</mat-label>
+        <mat-select [value]="status()" (selectionChange)="onStatusChange($event.value)">
+          @for (option of statusOptions; track option.value) {
+            <mat-option [value]="option.value">{{ option.label }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </app-data-table>
+  </section>
+} @else if (loadError()) {
+  <app-state-message
+    tone="error"
+    message="Orders could not be loaded. Refresh the page to try again."
+  />
+} @else {
+  <app-state-message message="Loading orders" />
+}

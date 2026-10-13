@@ -1,0 +1,89 @@
+@if (searchable()) {
+  <div class="table-toolbar">
+    <label class="search-field">
+      <span class="sr-only">{{ searchPlaceholder() }}</span>
+      <input
+        #search
+        type="search"
+        [attr.value]="query().q"
+        [placeholder]="searchPlaceholder()"
+        (input)="onSearch($event)"
+      />
+    </label>
+    <ng-content select="[tableFilters]" />
+  </div>
+} @else {
+  <ng-content select="[tableFilters]" />
+}
+
+@if (pageable()) {
+  <p class="table-meta">
+    {{ result().total | number }}
+    {{ result().total === 1 ? 'result' : 'results' }}
+  </p>
+}
+
+<div class="table-scroll">
+  <table mat-table [dataSource]="result().items" [attr.aria-label]="caption()" class="data-grid">
+    @for (column of columns(); track column.key) {
+      <ng-container [matColumnDef]="column.key">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          [class.cell-end]="column.align === 'end'"
+          [attr.aria-sort]="column.sortable ? ariaSort(column.key) : null"
+        >
+          @if (column.sortable) {
+            <button type="button" class="sort-button" (click)="toggleSort(column.key)">
+              {{ column.label }}
+              @if (ariaSort(column.key) === 'ascending') {
+                <span aria-hidden="true">↑</span>
+              } @else if (ariaSort(column.key) === 'descending') {
+                <span aria-hidden="true">↓</span>
+              }
+            </button>
+          } @else {
+            {{ column.label }}
+          }
+        </th>
+        <td mat-cell *matCellDef="let row" [class.cell-end]="column.align === 'end'">
+          @switch (column.format) {
+            @case ('currency') {
+              {{ amount(row, column.key) | currency: 'USD' : 'symbol' : '1.0-0' }}
+            }
+            @case ('date') {
+              {{ text(row, column.key) | date: 'mediumDate' }}
+            }
+            @case ('number') {
+              {{ amount(row, column.key) | number }}
+            }
+            @case ('badge') {
+              <app-status-badge [value]="text(row, column.key)" />
+            }
+            @default {
+              {{ text(row, column.key) }}
+            }
+          }
+        </td>
+      </ng-container>
+    }
+    <tr mat-header-row *matHeaderRowDef="displayedColumns()"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns()"></tr>
+  </table>
+</div>
+
+@if (result().total === 0) {
+  <p class="empty-state">{{ emptyMessage() }}</p>
+}
+
+@if (pageable() && result().total > 0) {
+  <mat-paginator
+    [length]="result().total"
+    [pageSize]="result().pageSize"
+    [pageIndex]="result().page - 1"
+    [pageSizeOptions]="[8, 16, 32]"
+    [showFirstLastButtons]="true"
+    (page)="onPage($event)"
+    aria-label="Select page"
+  />
+}
